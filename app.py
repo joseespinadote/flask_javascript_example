@@ -18,6 +18,11 @@ def calcula(param1=None,param2=None):
         # but, as this is just an exercise, just copy/paste
         # your code here ;)
         ###########################################
-        time.sleep(3) # Simulating complex calculations...
-        return {'resultado':param1+param2}
+        try:
+            _param1 = float(param1)
+            _param2 = float(param2)
+            time.sleep(2) # Simulating complex calculations...
+            return {'resultado':_param1+_param2}
+        except:
+            return {'error':'Server error, check your params'}
     return {'error':'At least one parameter is null'}

@@ -45,7 +45,7 @@ function funcOnClick() {
   document.getElementById("resultado").innerHTML = "Cargando...";
   let param1 = document.getElementById("param1").value;
   let param2 = document.getElementById("param2").value;
-  let url = "http://localhost:5000/calcula/" + param1 + "/" + param2;
+  let url = "/calcula/" + param1 + "/" + param2;
   makeRequest("GET", url).then(function (data) {
     let resultado = JSON.parse(data);
     document.getElementById("resultado").innerHTML = resultado.resultado
